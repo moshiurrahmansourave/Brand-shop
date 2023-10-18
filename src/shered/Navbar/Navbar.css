@@ -1,0 +1,14 @@
+style
+
+
+nav a{
+    margin-right: 10px;
+}
+
+nav li a.active{
+   
+    text-decoration: underline;
+    text-decoration-color: rgb(100, 8, 219);
+    color: rgb(100, 8, 219);
+   
+}
