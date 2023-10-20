@@ -1,8 +1,7 @@
-# React + Vite
+## Our website features 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- In our website you can see first on the home page all the brand.
+- you can see all the brand product.
+- if you have choice a product, you  can see all the details of this product. 
+- you can update the product on the update file if you have login.
+- In our website you can see the all brand product without register our page.
