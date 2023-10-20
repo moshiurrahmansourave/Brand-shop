@@ -80,7 +80,7 @@ const Login = () => {
         <div className="flex items-center justify-between mx-4 mt-3">
         <p><Link className="  hover:underline" to="">Lost password?</Link></p>
             
-        <p><Link className=" hover:underline" to="/register">Create an account</Link></p>
+        <p><Link className=" hover:underline font-bold text-xl" to="/register">Create an account</Link></p>
         </div>
 
         <div>

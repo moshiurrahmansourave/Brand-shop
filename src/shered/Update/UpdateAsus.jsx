@@ -22,7 +22,7 @@ const UpdateAsus = () => {
         const updatedProduct = { name, image, brand, type, price, description};
         console.log(updatedProduct)
         //sent data to the server
-        fetch(`http://localhost:5000/${brand}/${_id}`,{
+        fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/${brand}/${_id}`,{
         
         method: 'PUT',
         headers:{
