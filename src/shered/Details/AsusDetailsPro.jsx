@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const AsusDetailsPro = () => {
     const updateAsus = useLoaderData();
-    const {_id, name, image, brand, type, price} =updateAsus;
+    const { name, image, brand,  price} =updateAsus;
     return (
         <div>
             <div className="grid md:grid-cols-4 grid-cols-1 lg:gap-6">

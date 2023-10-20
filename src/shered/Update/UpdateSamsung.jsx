@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const UpdateProduct = () => {
+const UpdateSamsung = () => {
 
     const product = useLoaderData();
     const {_id, name, image, brand, type, price, description} =product;
@@ -33,7 +33,7 @@ const UpdateProduct = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedCount>0){
                 Swal.fire('Product update successfully')
             }
         })
@@ -84,4 +84,4 @@ const UpdateProduct = () => {
     );
 };
 
-export default UpdateProduct;
+export default UpdateSamsung;

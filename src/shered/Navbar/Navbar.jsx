@@ -51,6 +51,17 @@ const Navbar = () => {
         user && <p>{user?.email}</p>
       }
     </div>
+
+    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-7 rounded-full">
+          {
+            user ?
+              <img src={user.photoURL} />
+              :
+              <img src="" alt="" />
+          }
+        </div>
+      </label>
     
 {
     user ? 

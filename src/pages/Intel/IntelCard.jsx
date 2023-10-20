@@ -35,7 +35,7 @@ const IntelCard = ({product}) => {
           </Link>
           </div>
   
-          <Link to={`/updateProduct/${_id}`}>
+          <Link to={`/updateIntel/${_id}`}>
         <button className="btn btn-sm border-none rounded-2xl bg-teal-600 text-white font-semibold px-10 ">
            <FaPencilAlt></FaPencilAlt> Update
             </button>

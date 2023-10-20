@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const IntelDetailsPro = () => {
     const updateIntel = useLoaderData();
-    const {_id, name, image, brand, type, price} =updateIntel;
+    const { name, image, brand,  price} =updateIntel;
     return (
         <div>
             <div className="grid md:grid-cols-4 grid-cols-1 lg:gap-6">

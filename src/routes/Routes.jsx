@@ -12,13 +12,18 @@ import Samsung from "../pages/Samsung/Samsung";
 import Intel from "../pages/Intel/Intel";
 import Apple from "../pages/Apple/Apple";
 import PrivateRoute from "./PrivateRoute";
-import UpdateProduct from "../shered/UpdateProduct/UpdateProduct";
 import GoogleDetailsPro from "../shered/Details/GoogleDetailsPro";
 import AppleDetailsPro from "../shered/Details/AppleDetailsPro";
 import SamsungDetailsPro from "../shered/Details/SamsungDetailsPro";
 import SonyDetailsPro from "../shered/Details/SonyDetailsPro";
 import IntelDetailsPro from "../shered/Details/IntelDetailsPro";
 import AsusDetailsPro from "../shered/Details/AsusDetailsPro";
+import UpdateApple from "../shered/Update/UpdateApple";
+import UpdateSamsung from "../shered/Update/UpdateSamsung";
+import UpdateSony from "../shered/Update/UpdateSony";
+import UpdateGoogle from "../shered/Update/UpdateGoogle";
+import UpdateIntel from "../shered/Update/UpdateIntel";
+import UpdateAsus from "../shered/Update/UpdateAsus";
 
 
 
@@ -82,39 +87,82 @@ const routes = createBrowserRouter([
                 element:<Intel></Intel>,
                 loader:() => fetch('http://localhost:5000/intel')
             },
+
+            //----------------update---------------
             {
-                path:'/updateProduct/:id',
-                element:<UpdateProduct></UpdateProduct>,
+                path:'/updateGoogle/:id',
+                element:<PrivateRoute><UpdateGoogle></UpdateGoogle></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/google/${params.id}`)
             },
             {
+                path:'/updateApple/:id',
+                element:<PrivateRoute><UpdateApple></UpdateApple></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/apple/${params.id}`)
+            },
+            {
+                path:'/updateSamsung/:id',
+                element:<PrivateRoute><UpdateSamsung></UpdateSamsung></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/samsung/${params.id}`)
+            },
+            {
+                path:'/updateSony/:id',
+                element:<PrivateRoute><UpdateSony></UpdateSony></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/sony/${params.id}`)
+            },
+            {
+                path:'/updateIntel/:id',
+                element:<PrivateRoute><UpdateIntel></UpdateIntel></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/intel/${params.id}`)
+            },
+            {
+                path:'/updateAsus/:id',
+                element:<PrivateRoute><UpdateAsus></UpdateAsus></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/asus/${params.id}`)
+            },
+
+
+
+            //_____________________________details__________________
+            {
                 path:'GoogleDetailsProduct/:id',
-                element:<GoogleDetailsPro></GoogleDetailsPro>,
+                element:<PrivateRoute>
+                    <GoogleDetailsPro></GoogleDetailsPro>
+                    </PrivateRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/google/${params.id}`)
             },
             {
                 path:'AppleDetailsProduct/:id',
-                element:<AppleDetailsPro></AppleDetailsPro>,
+                element:<PrivateRoute>
+                    <AppleDetailsPro></AppleDetailsPro>
+                    </PrivateRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/apple/${params.id}`)
             },
             {
                 path:'samsungDetailsProduct/:id',
-                element:<SamsungDetailsPro></SamsungDetailsPro>,
+                element:<PrivateRoute>
+                    <SamsungDetailsPro></SamsungDetailsPro>
+                    </PrivateRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/samsung/${params.id}`)
             },
             {
                 path:'sonyDetailsProduct/:id',
-                element:<SonyDetailsPro></SonyDetailsPro>,
+                element:<PrivateRoute>
+                    <SonyDetailsPro></SonyDetailsPro>
+                </PrivateRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/sony/${params.id}`)
             },
             {
                 path:'intelDetailsProduct/:id',
-                element:<IntelDetailsPro></IntelDetailsPro>,
+                element:<PrivateRoute>
+                    <IntelDetailsPro></IntelDetailsPro>
+                    </PrivateRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/intel/${params.id}`)
             },
             {
                 path:'asusDetailsProduct/:id',
-                element:<AsusDetailsPro></AsusDetailsPro>,
+                element:<PrivateRoute>
+                    <AsusDetailsPro></AsusDetailsPro>
+                    </PrivateRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/asus/${params.id}`)
             },
 

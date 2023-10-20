@@ -74,7 +74,7 @@ const Home = () => {
                 <br />
                 <p className="text-xl my-11">It has gained increasing popularity as an effective medium for conveying news and information besides entertainment. Music systems, VCD, DVDs are also very important means of entertainment. Television as Entertainment</p>
 
-Among all the other headsets television plays an important role Television has revolutionized life all over the world. There is a television field of entertainment.</p>
+             Among all the other headsets television plays an important role Television has revolutionized life all over the world. There is a television field of entertainment.</p>
             </div>
             
            </div>

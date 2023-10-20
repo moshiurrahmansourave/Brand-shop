@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const SonyDetailsPro = () => {
     const updateSony = useLoaderData();
-    const {_id, name, image, brand, type, price} =updateSony;
+    const { name, image, brand,  price} =updateSony;
     return (
         <div>
             <div className="grid md:grid-cols-4 grid-cols-1 lg:gap-6">
