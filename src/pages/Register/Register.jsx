@@ -1,11 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 
 const Register = () => {
     const {createUser} = useContext(AuthContext)
+    const [registerError, setRegisterError] = useState('')
+    const [success, setSuccess] = useState('')
     const navigate = useNavigate();
 
     const handleRegister = e =>{
@@ -17,13 +20,27 @@ const Register = () => {
         const password = form.get('password');
         console.log(name, email, password);
 
+        setRegisterError('')
+        setSuccess('')
+        if (password.length < 6) {
+            setRegisterError('password should be 6 carecter or longer')
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setRegisterError('your password should have at least one upuer case caracters.')
+            Swal.fire('your password should have at least one upuer case caracters.')
+            return;
+        }
+
         createUser (email,password)
         .then(result =>{
             console.log(result.user)
             navigate(location?.state ? location.state : '/')
         })
         .catch(error =>{
-            console.error(error);
+            console.error(error)
+            setRegisterError(error.message)
+            Swal.fire('Already exists')
         })
     }
 
@@ -62,6 +79,14 @@ const Register = () => {
            <label className="label">
                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
            </label>
+           {
+                registerError && <p className="text-red-600">{registerError}</p>
+            }
+            {
+                success && <p className="text-green-700">
+                    {success}
+                </p>
+            }
           
        </div>
        <div className="form-control mt-6">

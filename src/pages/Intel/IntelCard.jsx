@@ -28,9 +28,11 @@ const IntelCard = ({product}) => {
      </div>
         <div className=" flex justify-between items-center mt-6">
           <div>
+          <Link to={`/intelDetailsProduct/${_id}`}>
           <p className="btn btn-sm border-none rounded-2xl bg-teal-600 text-white font-semibold px-10">
               Deatails
               </p>
+          </Link>
           </div>
   
           <Link to={`/updateProduct/${_id}`}>
