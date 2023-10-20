@@ -10,7 +10,7 @@ const Header = () => {
     <div>
         
     </div>
-    <div className="flex lg:flex-row flex-col md:flex-col gap-4 lg:gap-96 ">
+    <div className="flex lg:flex-row flex-col md:flex-col gap-4 lg:gap-96 py-16">
       <div className="">
       <h1 className="my-3 mt-8 text-4xl font-bold">WHERE REALITY ENDS <br /> AND IMAGINATION BEGINS</h1>
 

@@ -1,12 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import {  FaGoogle,  } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../firebase/firebase.config";
 
 const Login = () => {
-
     const {singIn} = useContext(AuthContext)
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const auth = getAuth(app);
+    const googleProvider = new GoogleAuthProvider();
+
+
+    const handleGoogleSingIn = () =>{
+        signInWithPopup(auth, googleProvider)
+        .then(result =>{
+            const user =result.user;
+            console.log(user)
+            Swal.fire('Login successfully')
+            navigate(location?.state ? location.state :
+                '/')
+        })
+        .catch(error =>{
+            console.error(error)
+        })
+   
+    }
+
     const handleLogin = e =>{
         e.preventDefault();
         console.log(e.currentTarget)
@@ -16,11 +40,17 @@ const Login = () => {
         singIn(email, password)
         .then(result =>{
             console.log(result);
+
+            navigate(location?.state ? location.state : '/')
+
         })
         .catch(error =>{
             console.error(error)
+            Swal.fire('email does not match')
         })
     }
+
+    
 
     return (
         <div className="lg:mb-96 mb-5 ">
@@ -55,7 +85,7 @@ const Login = () => {
 
         <div>
             <h1 className="text-lg font-semibold text-center mt-2">Login with</h1>
-            <button  className="btn btn-outline w-full font-medium text-lg mb-2 hover:text-white ">
+            <button onClick={handleGoogleSingIn} className="btn btn-outline w-full font-medium text-lg mb-2 hover:text-white ">
                 <FaGoogle className='text-lg'></FaGoogle>
                 Google
             </button>

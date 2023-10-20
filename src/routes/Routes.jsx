@@ -11,6 +11,10 @@ import Sony from "../pages/Sony/Sony";
 import Samsung from "../pages/Samsung/Samsung";
 import Intel from "../pages/Intel/Intel";
 import Apple from "../pages/Apple/Apple";
+import PrivateRoute from "./PrivateRoute";
+import UpdateProduct from "../shered/UpdateProduct/UpdateProduct";
+
+
 
 
 
@@ -22,15 +26,15 @@ const routes = createBrowserRouter([
             {
                 path:'/',
                 element: <Home></Home>,
-                loader:() => fetch('service.json')
+                loader:() => fetch('/service.json')
             },
             {
                 path:'/addProduct',
-                element:<AddProduct></AddProduct>
+                element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
                 path:'/mycart',
-                element:<MyCart></MyCart>
+                element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
             },
             {
                 path:'/login',
@@ -70,8 +74,14 @@ const routes = createBrowserRouter([
                 path:'/intel',
                 element:<Intel></Intel>,
                 loader:() => fetch('http://localhost:5000/intel')
-            }
-           
+            },
+            {
+                path:'/updateProduct/:id',
+                element:<UpdateProduct></UpdateProduct>,
+                loader: ({params}) => fetch(`http://localhost:5000/google/${params.id}`)
+            },
+          
+            
             
         ]
     }

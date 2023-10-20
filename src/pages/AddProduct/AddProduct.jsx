@@ -34,37 +34,37 @@ const AddProduct = () => {
         })
     }
     return (
-        <div>
-            <h2 className="text-4xl">  add product</h2>
+        <div className="lg:mb-72 mb-14">
+            <h2 className="text-4xl text-center underline font-bold mt-14 mb-4">  add product</h2>
             <form onSubmit={handleAddProduct}>
-            <div className="lg:flex gap-4">
-          <div className="md:w-1/2">
+            <div className="lg:flex gap-4 ">
+          <div className="md:w-1/2 mb-8">
             <p>Name</p>
-            <input type="text" name="name" placeholder="Type here" className="input input-bordered w-full " />
+            <input type="text" name="name" placeholder="Type here" className="input input-bordered w-full " required />
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mb-8">
             <p>Image</p>
-            <input type="text" name="image" placeholder="Brand Name" className="input input-bordered w-full " />
+            <input type="text" name="image" placeholder="image url" className="input input-bordered w-full " required />
             </div>
           </div>
-          <div className="lg:flex gap-4">
-          <div className="md:w-1/2">
+          <div className="lg:flex gap-4 ">
+          <div className="md:w-1/2 mb-8">
             <p>Brand Name</p>
-            <input type="text" name="brandName" placeholder="Type here" className="input input-bordered w-full " />
+            <input type="text" name="brandName" placeholder="Type here" className="input input-bordered w-full " required/>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mb-8">
             <p>Type</p>
-            <input type="text" name="type" placeholder="Brand Name" className="input input-bordered w-full " />
+            <input type="text" name="type" placeholder="Type here" className="input input-bordered w-full " required />
             </div>
           </div>
           <div className="lg:flex gap-4">
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 mb-8">
             <p>Price</p>
-            <input type="text" name="price" placeholder="Type here" className="input input-bordered w-full " />
+            <input type="text" name="price" placeholder="Type here" className="input input-bordered w-full "required />
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mb-8">
             <p>Short description</p>
-            <input type="text" name="description" placeholder="Brand Name" className="input input-bordered w-full " />
+            <input type="text" name="description" placeholder="Brand Name" className="input input-bordered w-full " required />
             </div>
           </div>
           

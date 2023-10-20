@@ -12,13 +12,10 @@ const Navbar = () => {
         .catch()
     }
 
-    const navLinks = <nav className="flex lg:flex-row flex-col space-x-10">
+    const navLinks = <nav className="flex text-lg font-bold  lg:flex-row flex-col space-x-10">
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/addProduct"> Add Product</NavLink></li>
         <li><NavLink to="/myCart">My Cart</NavLink></li>
-       
-        
-        
 
     </nav>
 
@@ -34,26 +31,40 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <div className="flex items-center">
+    <a className=" text-violet-700 text-4xl font-bold">electro</a>
+    <div className="w-14 mt-3">
+      <img src="https://i.ibb.co/jwx9vCZ/landing-img-1.png" alt="" />
+    </div>
+    </div>
   </div>
-  <div className="navbar-end hidden lg:flex mr-10">
+  <div className="navbar-center hidden lg:flex mr-10">
     <ul className=" px-1">
      {navLinks}
     </ul>
   </div>
   
-  {
+<div className="navbar-end">
+
+<div className=" mr-3 text-lg">
+      {
+        user && <p>{user?.email}</p>
+      }
+    </div>
+    
+{
     user ? 
-    <button onClick={handleSingOut} className="btn">sing Out</button>
+    <button onClick={handleSingOut} className="btn btn-sm bg-violet-500 text-white">sing Out</button>
     :
     <Link to="/login">
-    <p className="btn">Login</p>
+    <p className="btn btn-sm bg-violet-500 text-white">Login</p>
     </Link>
   
   }
-
+</div>
     
 </div>
+
         </div>
     );
 };
