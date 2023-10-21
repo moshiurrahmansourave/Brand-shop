@@ -49,25 +49,25 @@ const Navbar = () => {
     </div>
     <div className="flex items-center">
     <a className=" text-violet-700 text-4xl font-bold">electro</a>
-    <div className="flex items-center">
-    <div className="w-14 mt-3">
+    <div className="flex items-center lg:flex-row flex-col">
+    <div className="w-14 mt-3 hidden lg:flex">
       <img src="https://i.ibb.co/jwx9vCZ/landing-img-1.png" alt="" />
     </div>
-    <div className="mt-5 ml-4">
+    <div className="lg:mt-5 mt-4  ml-4">
     <input type="checkbox" onChange={handleToggle} className="toggle" />
     </div>
     </div>
     </div>
   </div>
-  <div className="navbar-center hidden lg:flex mr-10">
+  <div className="navbar-center hidden lg:flex ">
     <ul className=" px-1">
      {navLinks}
     </ul>
   </div>
   
-<div className="navbar-end">
+<div className="navbar-end flex ">
 
-<div className=" mr-3 text-lg">
+<div className=" mr-3 text-lg hidden lg:flex">
       {
         user && <p>{user?.email}</p>
       }

@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 const AppleDetailsPro = () => {
     const updateApple = useLoaderData();
     const { name, image, brand, price} =updateApple;
+    
     return (
         <div>
             <div className="grid md:grid-cols-4 grid-cols-1 lg:gap-6">
