@@ -28,8 +28,6 @@ import UpdateAsus from "../shered/Update/UpdateAsus";
 
 
 
-
-
 const routes = createBrowserRouter([
     {
         path:'/',
@@ -59,65 +57,65 @@ const routes = createBrowserRouter([
             {
                 path:'/google',
                 element:<Google></Google>,
-                loader:() => fetch('https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/google')
+                loader:() => fetch('https://assignmen-10-brand-shop-server.vercel.app/google')
             },
             {
                 path:'/asus',
                 element:<Asus></Asus>,
-                loader:() => fetch('https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/asus')
+                loader:() => fetch('https://assignmen-10-brand-shop-server.vercel.app/asus')
             },
             {
                 path:'/apple',
                 element: <Apple></Apple>,
-                loader:() => fetch('https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/apple')
+                loader:() => fetch('https://assignmen-10-brand-shop-server.vercel.app/apple')
             },
             {
                 path:'/sony',
                 element:<Sony></Sony>,
-                loader:() => fetch('https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/sony')
+                loader:() => fetch('https://assignmen-10-brand-shop-server.vercel.app/sony')
                 
             },
             {
                 path:'/samsung',
                 element:<Samsung></Samsung>,
-                loader:() => fetch('https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/samsung')
+                loader:() => fetch('https://assignmen-10-brand-shop-server.vercel.app/samsung')
             },
             {
                 path:'/intel',
                 element:<Intel></Intel>,
-                loader:() => fetch('https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/intel')
+                loader:() => fetch('https://assignmen-10-brand-shop-server.vercel.app/intel')
             },
 
             //----------------update---------------
             {
                 path:'/updateGoogle/:id',
                 element:<PrivateRoute><UpdateGoogle></UpdateGoogle></PrivateRoute>,
-                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/google/${params.id}`)
+                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/google/${params.id}`)
             },
             {
                 path:'/updateApple/:id',
                 element:<PrivateRoute><UpdateApple></UpdateApple></PrivateRoute>,
-                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/apple/${params.id}`)
+                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/apple/${params.id}`)
             },
             {
                 path:'/updateSamsung/:id',
                 element:<PrivateRoute><UpdateSamsung></UpdateSamsung></PrivateRoute>,
-                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/samsung/${params.id}`)
+                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/samsung/${params.id}`)
             },
             {
                 path:'/updateSony/:id',
                 element:<PrivateRoute><UpdateSony></UpdateSony></PrivateRoute>,
-                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/sony/${params.id}`)
+                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/sony/${params.id}`)
             },
             {
                 path:'/updateIntel/:id',
                 element:<PrivateRoute><UpdateIntel></UpdateIntel></PrivateRoute>,
-                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/intel/${params.id}`)
+                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/intel/${params.id}`)
             },
             {
                 path:'/updateAsus/:id',
                 element:<PrivateRoute><UpdateAsus></UpdateAsus></PrivateRoute>,
-                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/asus/${params.id}`)
+                loader: ({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/asus/${params.id}`)
             },
 
 
@@ -128,42 +126,42 @@ const routes = createBrowserRouter([
                 element:<PrivateRoute>
                     <GoogleDetailsPro></GoogleDetailsPro>
                     </PrivateRoute>,
-                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/google/${params.id}`)
+                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/google/${params.id}`)
             },
             {
                 path:'AppleDetailsProduct/:id',
                 element:<PrivateRoute>
                     <AppleDetailsPro></AppleDetailsPro>
                     </PrivateRoute>,
-                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/apple/${params.id}`)
+                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/apple/${params.id}`)
             },
             {
                 path:'samsungDetailsProduct/:id',
                 element:<PrivateRoute>
                     <SamsungDetailsPro></SamsungDetailsPro>
                     </PrivateRoute>,
-                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/samsung/${params.id}`)
+                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/samsung/${params.id}`)
             },
             {
                 path:'sonyDetailsProduct/:id',
                 element:<PrivateRoute>
                     <SonyDetailsPro></SonyDetailsPro>
                 </PrivateRoute>,
-                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/sony/${params.id}`)
+                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/sony/${params.id}`)
             },
             {
                 path:'intelDetailsProduct/:id',
                 element:<PrivateRoute>
                     <IntelDetailsPro></IntelDetailsPro>
                     </PrivateRoute>,
-                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/intel/${params.id}`)
+                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/intel/${params.id}`)
             },
             {
                 path:'asusDetailsProduct/:id',
                 element:<PrivateRoute>
                     <AsusDetailsPro></AsusDetailsPro>
                     </PrivateRoute>,
-                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server-h5ukaw2xf-moshiurs-projects.vercel.app/asus/${params.id}`)
+                loader:({params}) => fetch(`https://assignmen-10-brand-shop-server.vercel.app/asus/${params.id}`)
             },
 
 

@@ -12,7 +12,7 @@ const Header = () => {
     </div>
     <div className="flex lg:flex-row flex-col md:flex-col gap-4 lg:gap-96 py-16">
       <div className="">
-      <h1 className="my-3 mt-8 text-4xl font-bold">WHERE REALITY ENDS <br /> AND IMAGINATION BEGINS</h1>
+      <h1 className="my-3 mt-8 text-4xl font-bold">WHERE <span className="text-violet-700">REALITY</span> ENDS <br /> AND IMAGINATION BEGINS</h1>
 
       <h2 className="mb-16">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, expedita? </h2>
 

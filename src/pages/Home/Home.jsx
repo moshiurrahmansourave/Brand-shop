@@ -3,6 +3,8 @@ import Header from "../../shered/Header/Header";
 import Brand from "./Brand";
 
 
+
+
 const Home = () => {
     const brands = useLoaderData()
     console.log(brands)
@@ -21,7 +23,7 @@ const Home = () => {
            {/* extra section */}
            <h1 className="text-5xl text-center my-3">
             Import - Customize - Publish </h1>
-           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  px-36 py-14 gap-8 bg-gray-200 mb-7">
+           <div className="glass grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  px-36 py-14 gap-8  mb-7">
             {/* 1 card */}
            <div>
                 <img src="https://i.ibb.co/kcb3YG0/landing-icon-1.png" alt="" />
@@ -62,7 +64,7 @@ const Home = () => {
            
            {/* extra section  2*/}
            <p className="text-5xl font-bold text-center items-center my-12">choose your product and <br /> stay happy</p>
-           <div className="flex  lg:flex-row flex-col bg-slate-200 mb-12">
+           <div className="flex  lg:flex-row flex-col glass mb-12">
             <div className="w-1/2">
                 <img src="https://i.ibb.co/6DPTh4k/da-banner-3-1.png" alt="" />
             </div>

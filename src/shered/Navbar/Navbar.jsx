@@ -1,11 +1,27 @@
 import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
+    //---------
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
 
+    const handleToggle = e =>{
+      if(e.target.checked){
+        setTheme("dark");
+      } else{
+        setTheme("light")
+      }
+    }
+
+    useEffect(()=>{
+      localStorage.setItem("theme", theme);
+      const localTheme = localStorage.getItem("theme");
+      document.querySelector("html").setAttribute("data-theme", localTheme)
+    },[theme])
+//--------
     const handleSingOut = () =>{
         logOut()
         .then()
@@ -21,7 +37,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100 ">
+            <div className="navbar glass ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -33,8 +49,13 @@ const Navbar = () => {
     </div>
     <div className="flex items-center">
     <a className=" text-violet-700 text-4xl font-bold">electro</a>
+    <div className="flex items-center">
     <div className="w-14 mt-3">
       <img src="https://i.ibb.co/jwx9vCZ/landing-img-1.png" alt="" />
+    </div>
+    <div className="mt-5 ml-4">
+    <input type="checkbox" onChange={handleToggle} className="toggle" />
+    </div>
     </div>
     </div>
   </div>
@@ -58,7 +79,7 @@ const Navbar = () => {
             user ?
               <img src={user.photoURL} />
               :
-              <img src="" alt="" />
+              <img src="https://i.ibb.co/jLvgVST/user.png" alt="" />
           }
         </div>
       </label>

@@ -5,9 +5,11 @@ import Footer from "../shered/Footer/Footer";
 
 const Root = () => {
     return (
-        <div className="px-6 mx-auto border">
+        <div className="">
+            <div className="mx-auto max-w-screen-2xl ">
             <Navbar></Navbar>
             <Outlet></Outlet>
+            </div>
             <Footer></Footer>
             
         </div>
